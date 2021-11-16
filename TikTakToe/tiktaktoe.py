@@ -73,22 +73,25 @@ def main():
 
     players = ["X", "O"]
 
+    player1 = input("Name who play X?")
+    player2 = input("Name who play 0?")
+
     turn = 0
     while not is_mat_full(mat):
         drawboard(mat)
         if turn == 0:
-            print("You play!")
+            print(player1, "turn")
             row, col = play(mat)
             mat[row][col] = players[turn]
 
         else:
-            print("Computer plays!")
+            print(player2, "turn")
             row, col = play(mat)
             mat[row][col] = players[turn]
 
         if check_winner(mat):
             drawboard(mat)
-            print("X won!" if turn == 0 else "0 won!")
+            print(player1, "won!" if turn == 0 else player2, "won!")
             break
         turn = 1 - turn
     else:
@@ -96,4 +99,21 @@ def main():
         print("It's a tie!")
 
 
-main()
+# def player_name(player1, player2):
+#     player1 = input("Name who plays X")
+#     player2 = input("Name who plays 0")
+
+
+def main_play():
+    print("-="*13, "TIC TAC TOE", "=-"*13)
+    user_input = input("1 - play\n2 - exit\n >")
+    while True:
+        if user_input == "play":
+            main()
+        elif user_input == "exit":
+            exit()
+        else:
+            pass
+
+
+main_play()

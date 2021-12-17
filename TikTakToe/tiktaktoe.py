@@ -73,8 +73,8 @@ def main():
 
     players = ["X", "O"]
 
-    player1 = input("Name who play X?")
-    player2 = input("Name who play 0?")
+    player1 = input("Name who play X?\n>")
+    player2 = input("Name who play 0?\n>")
 
     turn = 0
     while not is_mat_full(mat):
@@ -108,12 +108,12 @@ def main_play():
     print("-="*13, "TIC TAC TOE", "=-"*13)
     user_input = input("1 - play\n2 - exit\n >")
     while True:
-        if user_input == "play":
+        if user_input == "play" or user_input == "1":
             main()
-        elif user_input == "exit":
+        elif user_input == "exit" or user_input == "2":
             exit()
         else:
-            pass
+            main_play()
 
 
 main_play()

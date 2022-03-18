@@ -8,4 +8,9 @@ if number_of_friends >= 0:
         members[name] = 0
 else:
     print('No one is joining for the party')
+print('Enter the total amount:')
+all_amount = int(input())
+amount = round(all_amount / number_of_friends, 2)
+for name in members:
+    members[name] = amount
 print(members)

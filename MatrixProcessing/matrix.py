@@ -1,5 +1,5 @@
 class Matrix:
-    def __init__(elements, self, size ):
+    def __init__(self, size, elements):
         rows = elements.split('\n')
         sizes = size.split(' ')
         x = int(sizes[0])

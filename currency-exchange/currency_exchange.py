@@ -1,3 +1,5 @@
-a = int(input("Please, enter the number of mycoins you have: >"))
-b = int(input("Please, enter the exchange rate: >"))
-print("The total amount of Dollars: ", a * b)
+coin = float(input("Please, enter the number of mycoins you have: >"))
+print("I will get", coin * 0.82, "ARS from the sale of", coin, "mycoins")
+print("I will get", coin * 0.17, "HNL from the sale of", coin, "mycoins")
+print("I will get", coin * 1.96, "AUD from the sale of", coin, "mycoins")
+print("I will get", coin * 0.208, "MAD from the sale of", coin, "mycoins")
